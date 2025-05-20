@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: ExternalInventorySystemTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! -- in ExternalInventorySystemTest
+ExternalInventorySystemTest.testFindItem_validItem -- Time elapsed: 0.016 s <<< ERROR!
+integration.ItemNotFoundException: varan med detta ID aaa123 hittades inte.
+	at integration.ExternalInventorySystem.findItem(ExternalInventorySystem.java:29)
+	at ExternalInventorySystemTest.testFindItem_validItem(ExternalInventorySystemTest.java:31)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
