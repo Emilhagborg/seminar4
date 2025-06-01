@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package view;
 
 import Module.SaleObserver;
@@ -14,16 +10,20 @@ import Module.SaleObserver;
 
 
 public class TotalRevenueView implements SaleObserver {
-    private double totalRevenue = 0;
+ private double totalRevenue; 
 
-    /**
-     *
-     * @param saleTotal
-     */
+    
+    public TotalRevenueView() {
+        this.totalRevenue = 0.0;
+        System.out.println("Total intäkt startar på: 0.0 kr");
+    }
+
+    
     @Override
     public void newSale(double saleTotal) {
-        totalRevenue += saleTotal;
-        System.out.println("Totala intäkter hittills: " + totalRevenue + " kr");
+        totalRevenue += saleTotal; 
+        System.out.printf("Total intäkt sedan programstart: %.2f kr%n", totalRevenue);
     }
 }
+      
         
