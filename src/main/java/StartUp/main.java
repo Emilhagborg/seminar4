@@ -6,6 +6,7 @@ package StartUp;
 
 import Module.SaleObserver;
 import controller.Poscontroller;
+import view.TotalRevenueFileOutput;
 import view.TotalRevenueView;
 import view.view;
 
@@ -14,18 +15,21 @@ import view.view;
  * @author emilhagborg
  */
 public class main {
-     public static void main(String[] args){
-       Poscontroller contr= new Poscontroller();
+    public static void main(String[] args) {
+        Poscontroller contr = new Poscontroller();
+
         SaleObserver revenueObserver = new TotalRevenueView();
+        TotalRevenueFileOutput totalRevenueFileOutput = new TotalRevenueFileOutput();
 
         
+        contr.addSaleObserver(totalRevenueFileOutput);
         contr.addSaleObserver(revenueObserver);
-        view delta =new view(contr);
-        delta.startSale();
-        
+
+        view delta = new view(contr);
+        delta.startSale(); 
+
         delta.registerItem();
         delta.applyDiscount();
         delta.endSale();
-
     }
 }
